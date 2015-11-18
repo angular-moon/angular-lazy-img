@@ -45,7 +45,7 @@ angular.module('angularLazyImg').factory('LazyImgMagic', [
     checkImagesT = lazyImgHelpers.throttle(checkImages, 30);
 
     function listen(param){
-      containers.forEach(function (container) {
+      angular.forEach(containers, function (container) {
         container[param]('scroll', checkImagesT);
         container[param]('touchmove', checkImagesT);
       });
@@ -168,8 +168,8 @@ angular.module('angularLazyImg').factory('lazyImgHelpers', [
 
     function getWinDimensions(){
       return {
-        height: $window.innerHeight,
-        width: $window.innerWidth
+        height: angular.element($window).innerHeight(),
+        width: angular.element($window).innerWidth()
       };
     }
 
