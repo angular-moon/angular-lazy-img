@@ -1,0 +1,15 @@
+{
+    "version": "1.2.2",
+    "description": "图片延迟加载",
+    "name": "angular-lazy-img",
+    "main": "angular-lazy-img.js",
+    "dependencies": [
+        "angular"
+    ],
+    "shim": {
+        "angular-lazy-img.js": {
+            "deps": ["angular"],
+            "exports": "'angularLazyImg'"
+        }
+    }
+}
